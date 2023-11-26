@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-active label,
+input:focus + label{
+    height: 30px;
+    transform: translate(0%, -20%);
+    font-size: 16px;
+}

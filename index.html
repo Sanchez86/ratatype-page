@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+</head>
+<body>
+<main class="container mx-auto max-w-[550px] bg-white h-screen px-3">
+    <div class="flex-col items-center justify-center mt-6 text-center">
+        <a href="#" class="inline-block">
+            <img src="./images/logo.png" alt="logo" class="block mx-auto" />
+        </a>
+        <img src="./images/ms-starky.png" alt="starky" class="block mx-auto mt-5 sm:mt-11" />
+        <h2 class="font-extrabold text-[48px] sm:text-[64px] text-[#0A335C] mt-1">Увійти</h2>
+        <button class="relative h-[54px] w-full text-[20px] text-[#0A335C] bg-[#00ACFF] border-2 border-solid border-[#00ACFF] rounded-lg border-b-[6px] mt-2">
+            <span class="absolute inset-0 flex justify-center items-center z-20">
+                <img src="./images/brand-google.png" alt="google" />
+                <span class="p-2 font-bold">Google</span>
+            </span>
+            <span class="absolute inset-0 bg-[#FFF] rounded-lg z-10"></span>
+        </button>
+        <div class="flex justify-center mt-3 sm:mt-6 text-[20px]">або</div>
+        <form action="/login" method="post" class="mt-3 sm:mt-4" onsubmit="handleSubmit(event)">
+            <div class="wrap-email relative flex items-end h-[60px] sm:h-[70px] bg-[#EEF4F6] w-full border-2 border-solid border-[#1742581A] rounded-lg px-3">
+                <input oninput="validateEmail(this.value)" onblur="handleEmail()" type="text" name="email" id="email" class="h-[40px] text-[20px] bg-[#EEF4F6] focus:bg-[#EEF4F6] active:bg-[#EEF4F6] w-full focus:outline-none focus:border-blue-500" />
+                <label for="email" class="absolute transition-all transform -translate-y-2 text-[#174258CC] block text-[20px] h-[60px] sm:h-[70px] left-3 top-2 w-full flex items-center">
+                    Ел. пошта
+                </label>
+            </div>
+            <div class="error-email hidden text-[#FF3B30] flex justify-start mt-1">Вкажіть вашу ел. пошту</div>
+
+            <div class="wrap-password relative flex items-end h-[60px] sm:h-[70px] bg-[#EEF4F6] w-full border-2 border-solid border-[#1742581A] rounded-lg px-3 mt-3 sm:mt-5">
+                <input oninput="validatePassword(this.value)" onblur="handlePassword()" type="password" name="password" id="password" class="h-[40px] text-[20px] bg-[#EEF4F6] w-full focus:outline-none focus:border-blue-500" />
+                <label for="password" class="absolute transition-all transform -translate-y-2 text-[#174258CC] block text-[20px] h-[60px] sm:h-[70px] left-3 top-2 w-full flex items-center">
+                    Пароль
+                </label>
+            </div>
+            <div class="error-password hidden text-[#FF3B30] flex justify-start mt-1">Вкажіть пароль (Більше 8 символів)</div>
+
+            <div class="flex justify-start mt-1 sm:mt-2">
+                <a href="#" class="underline text-[#174258] text-[16px] hover:text-[#000000]">Не пам'ятаєш пароль?</a>
+            </div>
+
+            <button type="submit" class="relative h-[48px] sm:h-[54px] w-[100%] text-[20px] text-[#0A335C] bg-[#FFCC00] border-2 border-solid border-[#FFCC00] rounded-lg border-b-[6px] mt-4 sm:mt-5">
+                <span class="absolute inset-0 flex justify-center items-center z-20">
+                    <span class="p-2 text-[17px] sm:text-[20px] font-bold">Увійти</span>
+                </span>
+                <span class="absolute inset-0 z-10 bg-[#FFEB99] rounded-lg"></span>
+            </button>
+            <div class="text-[#0A335C] text-[17px] sm:text-[20px] mt-4 sm:mt-6">
+                Ще не з нами? <a href="#" class="font-bold underline">Зареєструватися</a>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>
